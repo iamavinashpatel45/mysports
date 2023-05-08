@@ -1,0 +1,37 @@
+type Football @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  photos: [String!]
+  l1: String!
+  l2: String!
+}
+
+type Cricket @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  photos: [String!]
+  l1: String!
+  l2: String!
+}
+
+type Sports @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  cricket: Cricket @hasOne
+  football: Football @hasOne
+}
+
+type Owner @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  l1: String!
+  l2: String!
+  photos: [String!]
+}
+
+type Mysports @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  phone: String!
+  user: Boolean!
+  owner: Owner @hasOne
+  sports: Sports @hasOne
+}
+ 

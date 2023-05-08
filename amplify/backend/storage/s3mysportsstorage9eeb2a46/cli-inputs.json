@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3mysportsstorage9eeb2a46",
+  "bucketName": "mysports-storage-9eeb2a46",
+  "policyUUID": "2b1ab7b1",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
